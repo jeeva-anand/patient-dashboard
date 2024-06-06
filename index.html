@@ -5,8 +5,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HealthCare Dashboard</title>
+    <style>
+        .data-container {
+            font-family: Arial, sans-serif;
+            background-color: #F4F0FE;
+            margin-top: -50px;
+        }
+
+        .designSystolic {
+            background-color: #E66FD2;
+
+            padding: 0px 9px;
+            border-radius: 25px;
+
+        }
+
+        .designDiastolic {
+            background-color: #8C6FE6;
+
+            padding: 0px 9px;
+            border-radius: 25px;
+
+        }
+
+        .systolic {
+            font-size: 14px;
+        }
+
+        .small {
+            margin-bottom: 50px;
+        }
+
+        .value {
+            font-weight: bold;
+            font-size: 18px;
+            padding: 10px 0;
+        }
+
+        .status {
+            font-size: 14px;
+        }
+
+        .data-item {
+            margin-bottom: 20px;
+        }
+
+        .data-item span {
+            display: block;
+        }
+
+        .systolic {
+            padding-left: 5px;
+        }
+
+        .diastolic {
+            padding-left: 5px;
+        }
+
+        .smallDiastolic {
+            margin-top: 25px;
+        }
+
+        .smallSystolic {
+            margin-bottom: 25px;
+        }
+    </style>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -18,7 +87,7 @@
         <nav>
             <ul>
                 <li><i class="fas fa-home "></i>Overview</li>
-                <li><i class="fa fa-users" ></i>Patients</li>
+                <li><i class="fa fa-users"></i>Patients</li>
                 <li><i class="fas fa-calendar"></i>Schedule</li>
                 <li><i class='fas fa-comment-alt'></i>Message</li>
                 <li><i class='far fa-credit-card'></i>Transactions</li>
@@ -37,108 +106,119 @@
             <div class="search-bar">
                 <input type="text" placeholder="Search...">
             </div>
-            
-           <div id="pro_info">
-            <ul id ="pat_list" class="patient-list">
-                <!-- <li id="lists" class="lists">
-                    <img id="pat_pic" src="" alt="picture">
-                    <div class="patient-info" >
-                        <h3 id="pat_name"></h3>
-                        <div class="pat_data">
-                            <p id="pat_gen"></p>
-                            <p id="pat age"></p>
-                        </div>
-                    </div>
-                </li>                -->
-            </ul>
-           </div>
-            
+
+            <div id="pro_info">
+                <ul id="pat_list" class="patient-list">
+
+                </ul>
+            </div>
+
         </div>
 
         <div class="diagnosis-history">
-            
+
+
             <h2>Diagnosis History</h2>
-            <div class="blood-pressure">
-                <div class="bp-header">
-                    <h3>Blood Pressure</h3>
-                    <span>Last 6 months</span>
+            <div class="dign_hist_info">
+                <div class="chart_heading">
+                    <h3 style="padding:7px">Blood Pressure</h3>
+                    <div>
+                        <p class="months">Last 6 months <i class="fa fa-angle-down" aria-hidden="true"
+                                style="padding:10px"></i></p>
+                    </div>
+
                 </div>
-                <canvas id="bloodPressureChart" width="700" height="270"">
+                <div class="blood-pressure">
+                    <div class=" bp-header">
+                        <canvas id="bloodPressureChart" width="600" height="270">
+                        </canvas>
+                        <div class=" data-container" id="dataContainer">
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
 
 
-                </canvas>
-                <div class=" bp-info">
-                    <div>
-                        <span class="systolic">Systolic</span>
-                        <span class="value">160</span>
-                        <span class="description">Higher than Average</span>
-                    </div>
-                    <div>
-                        <span class="diastolic">Diastolic</span>
-                        <span class="value">78</span>
-                        <span class="description">Lower than Average</span>
-                    </div>
+            <div class="vitals">
+                <div class="vital vt1">
+                    <img src="./Images/respiratory rate.png" alt="Respiratory Rate Icon">
+                    <p class="heading">Respiratory Rate</p>
+                    <b>
+                        <p><strong id="resRate"></strong> bpm</p>
+                    </b>
+                    <p class="caption" id="resRate_level"></p>
+                </div>
+                <div class="vital vt2">
+                    <img src="./Images/temperature.png" alt="Temperature Icon">
+                    <p class="heading">Temperature</p>
+                    <b>
+                        <p><strong id="temp"></strong> <sup>o</sup>F</p>
+                    </b>
+                    <p class="caption" id="temp_level"></p>
+                </div>
+                <div class="vital vt3">
+                    <img src="./Images/HeartBPM.png" alt="Heart Rate Icon">
+                    <p class="heading">Heart Rate</p>
+                    <b>
+                        <p><strong id="heartRate"></strong> bpm
+                    </b></b>
+                    <p class="caption" id="heart_levels"></p>
+
+                </div>
             </div>
         </div>
-        <div class="vitals">
-            <div class="vital vt1">
-                <img src="./Images/respiratory rate.png" alt="Respiratory Rate Icon">
-                <p class="heading">Respiratory Rate</p>
-                <b>
-                    <p><strong id="resRate"></strong> bpm</p>
-                </b>
-                <p class="caption" id="resRate_level"></p>
-            </div>
-            <div class="vital vt2">
-                <img src="./Images/temperature.png" alt="Temperature Icon">
-                <p class="heading">Temperature</p>
-                <b>
-                    <p><strong id="temp"></strong> <sup>o</sup>F</p>
-                </b>
-                <p class="caption" id="temp_level"></p>
-            </div>
-            <div class="vital vt3">
-                <img src="./Images/HeartBPM.png" alt="Heart Rate Icon">
-                <p class="heading">Heart Rate</p>
-                <b>
-                    <p><strong id="heartRate"></strong> bpm
-                </b></b>
-                <p class="caption" id="heart_levels"></p>
 
-            </div>
+        <div class="profile">
+            <img id="profile-picture" src="" alt="Profile Picture" class="profile-image">
+            <h3 id="name"></h3>
+            <ul>
+                <li class="manrope-font"><i class="fas fa-birthday-cake"></i>
+                    <div class="text"><span>Date Of Birth</span><strong id="dob"></strong></div>
+                </li>
+                <li><i class="fas fa-venus"></i>
+                    <div class="text"><span>Gender</span><strong id="gender"></strong></div>
+                </li>
+                <li><i class="fa fa-phone"></i>
+                    <div class="text">
+                        <span>Contact Info.</span>
+                        <strong id="phone"></strong>
+                    </div>
+                </li>
+                <li><i class="fa-solid fa-phone"></i>
+                    <div class="text"><span>Emergency Contacts</span><strong id="emergency-contact"></strong></div>
+                </li>
+                <li><i class="fas fa-shield-alt"></i>
+                    <div class="text"><span>Insurance Provider</span><strong id="insurance"></strong></div>
+                </li>
+            </ul>
+            <button class="btn">Show All Information</button>
         </div>
 
-    </div>
 
-    <div class="profile">
-        <img id="profile-picture" src="" alt="Profile Picture" class="profile-image">
-        <h3 id="name"></h3>
-        <ul>
-            <li><i class="fas fa-birthday-cake"></i>
-                <div class="text"><span>Date Of Birth</span><strong id="dob"></strong></div>
-            </li>
-            <li><i class="fas fa-venus"></i>
-                <div class="text"><span>Gender</span><strong id="gender"></strong></div>
-            </li>
-            <li><i class="fas fa-phone"></i>
-                <div class="text">
-                    <span>Contact Info.</span>
-                    <strong id="phone"></strong>
+
+
+        <!-- <div class=" bp-info">
+                        <div>
+                            <span class="systolic">Systolic</span>
+                            <span class="value">160</span>
+                            <span class="description">Higher than Average</span>
+                        </div>
+                        <div>
+                            <span class="diastolic">Diastolic</span>
+                            <span class="value">78</span>
+                            <span class="description">Lower than Average</span>
+                        </div>
                 </div>
-            </li>
-            <li><i class="fas fa-phone-square"></i>
-                <div class="text"><span>Emergency Contacts</span><strong id="emergency-contact"></strong></div>
-            </li>
-            <li><i class="fas fa-shield-alt"></i>
-                <div class="text"><span>Insurance Provider</span><strong id="insurance"></strong></div>
-            </li>
-        </ul>
-        <button class="btn">Show All Information</button>
-    </div>
-    
+            </div>          
+        </div> -->
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="scripts.js"></script>
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="scripts.js"></script>
 </body>
 
 </html>

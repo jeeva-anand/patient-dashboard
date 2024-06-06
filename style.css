@@ -59,6 +59,39 @@ header {
     object-fit: scale-down;
 
 }
+.down{
+    padding-top: 10px;
+}
+
+.chart_heading{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+    /* padding-top: 15px; */
+
+}
+
+.subSetction{
+    display: flex;
+    flex-direction: column;
+}
+
+.chart_heading h3{
+    /* margin: 0; */
+}
+
+.months:hover{
+ cursor: pointer;
+}
+.chart_heading p{
+    /* margin: 0; */
+    padding-top: 7px;
+    margin-right: 250px;
+    /* padding-left: 20px; */
+    /* padding-top: 25px; */
+    font-size: 14px;
+    padding-right: 10px;
+}
 
 nav ul {
     list-style: none;
@@ -224,7 +257,7 @@ nav ul :hover {
     top: 108px;
     left: 1216px;
     width: 367px;
-    height: 700px;
+    height: 630px;
 
     
     background-color: #f8f9fa;
@@ -255,26 +288,43 @@ nav ul :hover {
 .profile ul {
     list-style: none;
     padding-left: 0px;
+    margin-top: 10px;
+    margin-bottom: 8px;
 }
 
 .profile ul li {
     /* margin: 10px 10px; */
     display: flex;
     text-align: left; 
-    padding-top: 30px;
+    padding-top: 20px;
+    
     /* justify-content: center; */
 
     
 }
 
+.manrope-font{
+    
+  /* font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal; */
+  font: normal normal medium 14px/19px Manrope;
+}
+
+
+.text{
+    color: #4a4848;
+}
 
 .profile ul li i {
-    /* margin-right: 10px; */
-     /* margin-top: 5px; */
-    background-color: #ecf0f2;
-    padding: 10px;
+       background-color: #ecf0f2;
+    padding: 0px 10px;
+    padding-top: 8px;
     border-radius: 20px;
-    /* margin-top: 5px; */
+    margin-top: 5px;
+    height: 25px;
+    width: 10px;
     
 } 
 
@@ -286,6 +336,8 @@ nav ul :hover {
     align-items: flex-start;
     padding-left: 10px;
     
+    
+    
 } 
 
 .profile ul li div span{
@@ -295,18 +347,8 @@ nav ul :hover {
 
 
 .text > strong{
-    padding: 5px;
+    padding-top: 5px;
 }
-
-/* .profile ul li i {
-    margin-right: 10px;
-}  */
-
-
-
-
-
-
 
 
 .btn {
@@ -317,8 +359,10 @@ nav ul :hover {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
-    margin-top: 20px;
+    margin-top: 10px;
     transition: background-color 0.3s ease;
+    width: 200px;
+    margin-top: 23px;
 }
 
 .btn:hover {
@@ -348,15 +392,21 @@ nav ul :hover {
 }
 
 .blood-pressure {
-    background-color: #f8f9fc;
-    padding: 20px;
+    background-color: #F4F0FE;
+    padding: 0 20px;
+    padding-bottom: 20px;
     border-radius: 10px;
     margin-bottom: 20px;
 }
+.dign_hist_info{
+    background-color: #F4F0FE;
+    border-radius: 25px;
+}
+
 
 .bp-header {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: center;
 }
 
