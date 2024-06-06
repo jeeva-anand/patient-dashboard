@@ -1,0 +1,449 @@
+
+@media screen and (min-device-width: 768px) {
+    ::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+        background: transparent;
+    }
+}
+
+@media screen and (min-device-width: 768px) {
+    ::-webkit-scrollbar-thumb {
+        background: rgba(83, 82, 82, 0.4);
+        border-radius: 6px;
+        border: 2px solid var(--color-white);
+    }
+}
+
+body {
+    font-family: 'Arial, sans-serif';
+    margin: 0;
+    padding: 0;
+    background-color: #f5f6f7;
+    /* #f6f6f9; */
+    /* ; */
+    color: #121212;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px 20px;
+    border-bottom: 1px solid #e9ecef;
+    height: 38px;
+    margin: 15px;
+    border-radius: 25px;
+}
+
+.logo {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    align-content: flex-start;
+    justify-content: center;
+    /* margin-top: 124px; */
+}
+
+.logo img {
+    
+     top: 108px;
+    left: 1216px;
+    width: 367px;
+    height: 740px;
+    
+    /* width: 150px;
+    height: 150px; */
+    border-radius: 50%;
+    object-fit: scale-down;
+
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    /* margin: 0; */
+    /* padding: 0; */
+}
+
+nav ul li {
+    margin: 0 15px;
+    padding: 9px 18px;
+}
+
+nav ul li i {
+   padding-right: 5px;
+
+}
+
+nav ul li i {
+   
+   
+
+}
+
+nav ul :hover {
+    background-color: #01F0D0;
+    border-radius: 25px;
+    cursor: pointer;
+
+    
+
+}
+
+.doc_profile {
+    display: flex;
+    align-items: center;
+}
+
+.doc_profile img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+
+
+.container {
+    display: flex;    
+    justify-content: space-between;
+    max-width: 1500px;
+    margin: 20px auto;
+    padding: 20px;
+    /* background-color: #f8f6f6; */
+    background-color: rgb(237 238 241);
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.pat_gen{
+    margin: 0;
+    font-size: 14px;
+}
+
+.pat_age{
+    margin: 0;
+    padding-left: 5px;
+    font-size: 14px;
+}
+
+.pat_name{
+    margin: 2px;
+    font-size: 16px;
+}
+
+.pat_data{
+    /* background-color: red; */
+    display: flex;
+
+}
+
+.lists{
+    /* border-radius: 25px; */
+}
+.patient-list .lists:hover{
+    background-color: #D8FCF7;
+    cursor: pointer;
+}
+
+.sidebar {
+    width: 15%;
+    height: 620px;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-right: 1px solid #e9ecef;
+    border-radius: 20px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    
+}
+
+
+.sidebar h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    
+}
+
+.search-bar input {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #e9ecef;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.patient-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    
+}
+
+.patient-list li {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #e9ecef;
+    
+}
+
+.patient-list li:last-child {
+    border-bottom: none;
+}
+
+.patient-list img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.patient-info h3 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.patient-info p {
+    margin: 5px 0 0;
+    font-size: 14px;
+    color: #6c757d;
+}
+
+ 
+.profile { 
+    flex: 1;
+    text-align: center; 
+/*     
+    width: 200px;
+    height: 50%; */
+
+    top: 108px;
+    left: 1216px;
+    width: 367px;
+    height: 700px;
+
+    
+    background-color: #f8f9fa;
+    border-radius: 20px;
+    border-color: black;
+    opacity: 1;
+    padding-top: 15px;
+    padding-left: 40px; 
+    
+
+    
+}
+
+.profile img {
+    
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile h3 {
+    margin: 10px 0;
+    font-size: 20px;
+    
+}
+
+.profile ul {
+    list-style: none;
+    padding-left: 0px;
+}
+
+.profile ul li {
+    /* margin: 10px 10px; */
+    display: flex;
+    text-align: left; 
+    padding-top: 30px;
+    /* justify-content: center; */
+
+    
+}
+
+
+.profile ul li i {
+    /* margin-right: 10px; */
+     /* margin-top: 5px; */
+    background-color: #ecf0f2;
+    padding: 10px;
+    border-radius: 20px;
+    /* margin-top: 5px; */
+    
+} 
+
+.profile ul li div {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 10px;
+    
+} 
+
+.profile ul li div span{
+   /* padding: 10px; */
+    
+} 
+
+
+.text > strong{
+    padding: 5px;
+}
+
+/* .profile ul li i {
+    margin-right: 10px;
+}  */
+
+
+
+
+
+
+
+
+.btn {
+    background-color: #00d9b6;
+    border: none;
+    border-radius: 25px;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #00bfa1;
+}
+
+
+
+
+
+
+
+
+.diagnosis-history {
+    flex: 3;
+    margin-right: 20px;
+    margin-left: 20px;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+
+.diagnosis-history h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.blood-pressure {
+    background-color: #f8f9fc;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.bp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bp-header h3 {
+    margin: 0;
+}
+
+.bp-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.bp-info div {
+    text-align: center;
+}
+
+.bp-info .systolic {
+    color: #d9534f;
+}
+
+.bp-info .diastolic {
+    color: #5bc0de;
+}
+
+.vitals {
+    display: flex;
+    justify-content: space-between;
+}
+
+.vital {
+    flex: 2;
+    text-align: start;
+    padding: 20px;
+    background-color: #FFE6F1;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.vital img {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 10px;
+}
+
+.vitals > .vt1 {
+    background-color: #E0F3FA;
+    border-radius: 12px;
+    opacity: 1;
+    font-size: 20px;
+}
+
+.vitals > .vt1 p{
+    margin: 0px;
+    padding-top:  10px;
+    font-size:  20px;
+}
+
+.vitals > .vt2 {
+    background-color: #FFE6E9;
+    border-radius: 12px;
+    opacity: 1;
+    font-size: 16px;
+}
+.vitals > .vt3 {
+    background-color: #FFE6F1;
+    border-radius: 12px;
+    opacity: 1;
+    font-size:  16px;
+}
+
+.vitals > .vt2 p{
+    margin: 0px;
+    padding-top: 10px;
+    font-size:  20px;
+}
+.vitals > .vt3 p{
+    margin: 0px;
+    padding-top: 10px;
+    font-size:  20px;
+}
+
+
+.vitals .vital .heading{
+        font-size:  16px;
+}
+
+.vitals .vital .caption{
+        font-size:  14px;
+}
